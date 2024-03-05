@@ -1,0 +1,25 @@
+<form [formGroup]="fg">
+    <label for="firstname">First name</label>
+    <input type="text" id="firstname" formControlName="firstname">
+    <p class="error" *ngIf="firstname && firstname.touched && firstname?.errors?.['required']">First name is required</p>
+    <label for="lastname">Last name</label>
+    <input type="text" id="lastname" formControlName="lastname">
+    <p class="error" *ngIf="lastname && lastname.touched && lastname?.errors?.['required']">Last name is required</p>
+    <label for="adress">Adress</label>
+    <input type="text" id="adress" formControlName="adress">
+    <p class="error" *ngIf="adress && adress.touched && adress?.errors?.['required']">Adress is required</p>
+    <label for="postcode">Postcode</label>
+    <input type="number" id="postcode" formControlName="postcode" minlength="10000" maxlength="99999">
+    <p class="error" *ngIf="postcode && postcode.touched && postcode?.errors?.['required']">Postcode is required</p>
+    <label for="city">City</label>
+    <input type="text" id="city" formControlName="city">
+    <p class="error" *ngIf="city && city.touched && city?.errors?.['required']">City is required</p>
+    <label for="cardNumber">Card Number</label>
+    <input type="number" id="cardNumber" formControlName="cardNumber">
+    <p class="error" *ngIf="cardNumber && cardNumber.touched && cardNumber?.errors?.['required']">Card Number is required</p>
+    <label for="cardValidity">Card Validity Date</label>
+    <input type="number" id="cardValidity" formControlName="cardValidity">
+    <p class="error" *ngIf="cardValidity && cardValidity.touched && cardValidity?.errors?.['required']">Card validity date is required</p>
+    <button (click)="cancel()" routerLink="/">Cancel</button>
+    <button type="submit" (click)="confirm()">Confirm</button>
+</form>

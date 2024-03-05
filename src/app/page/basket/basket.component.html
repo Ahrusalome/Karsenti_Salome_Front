@@ -1,0 +1,11 @@
+<button id="emptyBasket" (click)="emptyBasket()">Empty basket</button>
+<a routerLink="/checkout">basket</a>
+<div *ngFor="let article of basketOui">
+    <app-basket-article
+        id="{{article.id}}" 
+        name="{{article.name}}" 
+        [quantity]="article.quantity"
+        [price]="article.price"
+        [totalPrice]="article.totalPrice"
+        (addItemEvent)="addItemToBasket($event, article)"></app-basket-article>
+</div>

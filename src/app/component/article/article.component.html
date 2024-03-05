@@ -1,0 +1,9 @@
+<div *ngIf="season">{{season}}</div>
+<div *ngIf="name">{{name}}</div>
+<div *ngIf="price">{{price}}</div>
+<img *ngIf="image" src="{{image}}">
+<button id="removeButton" (click)="RemoveArticle()">-</button>
+{{numberToAdd}}
+<button id="addButton" (click)="AddArticle()">+</button>
+<button id="addToBasket" (click)="AddArticleToBasket(numberToAdd)">Add to basket</button>
+<button *ngIf="isInBasket" id="removeFromBasket" (click)="RemoveFromBasket()">Remove from basket</button>

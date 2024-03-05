@@ -1,0 +1,7 @@
+<div *ngIf="id">id : {{id}}</div>
+<div *ngIf="name">name : {{name}}</div>
+<button id="removeButton" (click)="AddArticleToBasket(-1)">-</button>
+<div *ngIf="quantity">quantity : {{quantity}}</div>
+<button id="addButton" (click)="AddArticleToBasket(1)">+</button>
+<div *ngIf="price">price : {{price}}</div>
+<div *ngIf="totalPrice">total price : {{totalPrice}}</div>

@@ -1,0 +1,10 @@
+<div *ngFor="let article of resultArticles">
+    <app-article name="{{article.Name}}" 
+    image="{{article['Closet Image']}}" 
+    season="{{article['Seasonal Availability']}}"
+    price="{{article.Buy}}" 
+    [isInBasket]="isInBasket(article)"
+    (addItemEvent)="addItemToBasket($event, article)"
+    (removeItemEvent)="RemoveItemFromBasket(article)">
+</app-article>
+</div>
